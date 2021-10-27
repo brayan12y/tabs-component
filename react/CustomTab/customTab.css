@@ -1,0 +1,340 @@
+.WrapperDisclouser {
+  /* color: red; */
+}
+
+.WrapperDisclouser .container {
+  justify-content: center;
+}
+
+.WrapperDisclouser .container .paragraph {
+  text-align: center;
+  max-width: 540px;
+  margin: 0 16px;
+  padding-top: 120px;
+  color: #03034E;
+}
+
+.WrapperDisclouser .container .strong {
+  font-size: 32px;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.WrapperDisclouser .trigger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.WrapperDisclouser .trigger :global(.vtex-rich-text-0-x-paragraph) {
+  font-weight: bold;
+}
+
+.WrapperDisclouser .trigger:focus,
+.WrapperDisclouser .trigger:focus :global(.vtex-rich-text-0-x-paragraph) {
+  color: #0F3E99;
+}
+
+
+
+.WrapperDisclouser .content {
+  transition: opacity 100ms ease-in, height 100ms ease-in, transform 200ms ease-in;
+  opacity: 0;
+  height: 0px;
+  transform: translate3d(0, -5%, 0);
+  /* transition: opacity 250ms ease-in-out,height 250ms ease-in-out,transform 250ms ease-in-out;
+    opacity: 0;
+    height: 0;
+    transform: translate3d(0,-10%,0); */
+}
+
+.WrapperDisclouser .content[data-enter] {
+  transition: opacity 300ms ease-out, height 300ms ease-out, transform 300ms ease-out;
+  opacity: 1;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  /* opacity: 1;
+  height: fit-content;
+  transform: translate3d(0,0,0); */
+}
+
+.WrapperDisclouser .content[data-leave] {
+  height: 0;
+  overflow: hidden;
+}
+
+.WrapperLayout .container {
+  display: flex;
+  width: 1237px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+}
+
+.WrapperLayout .listContainer__list {
+  width: 25%;
+  max-width: 100%;
+  height: fit-content;
+  box-shadow: 2px 2px 12px rgb(0 0 0 / 5%);
+}
+
+.WrapperLayout .content__container {
+  width: 75%;
+  max-width: 100%;
+  height: 600px;
+  overflow-x: auto;
+  padding: 0 3rem;
+  margin: 0;
+  border: none;
+  box-shadow: 2px 2px 12px rgb(0 0 0 / 5%);
+  position: relative;
+}
+
+.wrapper__list_title {
+  height: 66px;
+  width: 100%;
+
+  background: linear-gradient(349deg, #0076e2 -1%, #00a2e2 53%);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+
+.WrapperLayout .listContainer__list .listContainer {
+  margin: 12px 0;
+}
+
+.WrapperLayout .listContainer__list .listContainer div {
+  width: 100%;
+}
+
+.WrapperLayout .listContainer__list .listItem {
+  padding: 0%;
+  margin: 0%;
+}
+
+.WrapperLayout .listContainer__list .listItem.listItemActive {
+  background-color: #f2f2f2;
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.WrapperLayout .listContainer__list .listItem.listItemActive::after {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background-color: #1a4ea2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.WrapperLayout .listContainer__list .listItem button {
+  padding: 0;
+  background: transparent;
+  border: none;
+  width: 100%;
+}
+
+.WrapperLayout .listContainer__list .listItem button div {
+  color: #061730;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 3rem;
+  text-transform: initial;
+  display: block;
+  text-align: left;
+}
+
+.list__title {
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.wrapper__htmlContent {}
+
+.wrapper__customDisclosure .trigger {
+  background-color: transparent;
+  min-height: 56px;
+  position: relative;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1px 6px;
+  cursor: pointer;
+}
+
+.wrapper__customDisclosure .trigger .WrapperTrigger_Icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  padding: 0;
+  border: 2px solid;
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.wrapper__customDisclosure .trigger .DisclosureTrigger_Icon::after,
+.wrapper__customDisclosure .trigger .DisclosureTrigger_Icon::before {
+  content: "";
+  position: absolute;
+  background-color: #1e1e1e;
+  transition: transform .25s ease-out;
+}
+
+.wrapper__customDisclosure .trigger .DisclosureTrigger_Icon::before {
+  top: 0px;
+  left: 6px;
+  width: 2px;
+  height: 12px;
+  bottom: 0;
+  margin: auto;
+}
+
+.wrapper__customDisclosure .trigger .DisclosureTrigger_Icon::after {
+  top: 7px;
+  left: 0px;
+  width: 13px;
+  height: 2px;
+  right: 0;
+  margin: auto;
+}
+
+.wrapper__customDisclosure .trigger--visible .DisclosureTrigger_Icon::before {
+  content: "";
+  transform: rotate(90deg);
+}
+
+.wrapper__customDisclosure .trigger .DisclosureTrigger_Icon {
+  position: absolute;
+  width: 15px;
+  height: 16px;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+}
+
+.wrapper__customDisclosure .trigger div {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 22px;
+  color: #1a4ea2;
+  padding-right: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper__customDisclosure .trigger:hover,
+.wrapper__customDisclosure .trigger:active,
+.wrapper__customDisclosure .trigger--visible {
+  border: 1px solid #1a4ea2;
+}
+
+.content__container::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+.content__container::-webkit-scrollbar-thumb {
+  background-color: #1a4ea2;
+  outline: thin solid #fff;
+}
+
+.content__container .titlePrincipaContent {
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #3f3f40;
+  text-align: left;
+}
+
+.content__container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a4ea2;
+}
+
+.content__container a {
+  color: #00a2e2;
+  padding: 0 5px;
+}
+
+.WrapperLayout .contentItem svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.WrapperLayout .comeBackMobile {
+  display: none;
+}
+
+@media screen and (max-width: 65rem) {
+  .WrapperLayout .container {
+    display: block;
+    position: relative;
+    min-height: 600px;
+    width: 98%;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .WrapperLayout .listContainer__list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+  }
+
+  .WrapperLayout .content__container {
+    position: absolute;
+    margin-left: 100%;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    transition: all .7s ease-in-out;
+  }
+
+  .WrapperLayout .comeBackMobile {
+    display: flex;
+    color: #00A2E2;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .WrapperLayout .comeBackMobile img {
+    margin-right: 10px;
+  }
+
+}
+@media screen and (max-width: 20rem) {
+  .WrapperLayout .content__container {
+    padding: 10px;
+  }
+}

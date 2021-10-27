@@ -1,0 +1,6 @@
+{
+    "CustomTab": {
+        "component": "CustomTab",
+        "render": "server"
+    }
+}
